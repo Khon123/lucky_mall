@@ -9,7 +9,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	
-	<title>Lucky Mall :: {{ $title }}</title>
+	<title>{{ $title }} :: Lucky Mall</title>
 	
 	<!-- Bootstrap Core CSS -->
 	<link href="{{ asset('frontend/images/LUCKYMALL_LOGO_FINAL.png') }}" rel="shortcut icon">

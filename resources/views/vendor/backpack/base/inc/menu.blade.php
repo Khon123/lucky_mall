@@ -1,3 +1,6 @@
+<?php
+use App\Http\Controllers\Helpers\Language;
+?>
 <div class="navbar-custom-menu pull-left">
     <ul class="nav navbar-nav">
         <!-- =================================================== -->
@@ -21,9 +24,6 @@
 
         @if (Auth::guest())
             <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/login') }}">{{ trans('backpack::base.login') }}</a></li>
-            @if (config('backpack.base.registration_open'))
-            <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/register') }}">{{ trans('backpack::base.register') }}</a></li>
-            @endif
         @else
 
             <li style="width:54px;padding-top: 15px;">
@@ -37,7 +37,7 @@
                 </form>
             </li>
 
-            <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/logout') }}"><i class="fa fa-btn fa-sign-out"></i> {{ trans('backpack::base.logout') }}</a></li>
+            <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/logout') }}"><i class="fa fa-btn fa-sign-out"></i><?php echo Language::getTitleLang()=='en'?'Logout':'ចាកចេញពីកម្មវិធី'?></a></li>
         @endif
 
        <!-- ========== End of top menu right items ========== -->
